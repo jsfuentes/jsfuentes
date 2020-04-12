@@ -18,26 +18,7 @@
     "pretty": "prettier --write ."
   },
   "repository": "https://github.com/alxshelepenok/gatsby-starter-lumen",
-  "author": "Alexander Shelepenok <alxshelepenok@gmail.com>",
-  "license": "MIT",
-  "keywords": [
-    "gatsby",
-    "graphql",
-    "netlify",
-    "netlify-cms",
-    "pagination",
-    "categories",
-    "tags",
-    "prismjs",
-    "static",
-    "lost",
-    "blog",
-    "minimal",
-    "react",
-    "theme",
-    "starter",
-    "disqus"
-  ],
+  "author": "Jorge Fuentes",
   "dependencies": {
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
