@@ -6,12 +6,12 @@ draft: false
 slug: "toxic-idea-3-work-vs-play"
 category: "Toxic"
 tags:
-  - "Design"
-  - "Typography"
-  - "Web Development"
+  - "Life"
 description: "When I was a child, my parents and teachers used play as a reward for doing things I didn’t want to do like homework or chores. Punishment meant forcing me to do more work instead of going out to play. So I learned there was a clear distinction between work and play."
-socialImage: "/media/42-line-bible.jpg"
+socialImage: "https://cdn-images-1.medium.com/max/7672/0*U-iaErLCs2Kh8ZGs"
 ---
+
+![Photo by [Tommy Krombacher](https://unsplash.com/@ftm3000?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/7672/0*U-iaErLCs2Kh8ZGs)
 
 > “Work hard play hard”
 > “All work and no play makes Jack a dull boy””

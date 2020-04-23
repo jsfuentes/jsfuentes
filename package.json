@@ -1,7 +1,7 @@
 {
-  "version": "3.0.3",
-  "name": "gatsby-starter-lumen",
-  "description": "A minimal, lightweight and mobile-first starter for creating blazing-fast static blogs",
+  "version": "1.0.0",
+  "name": "jsfuentes",
+  "description": "Personal Website of jorge fuentes",
   "main": "n/a",
   "scripts": {
     "develop": "yarn run clean && gatsby develop",
@@ -79,7 +79,6 @@
     "browserslist": "4.11.1",
     "concurrently": "5.1.0",
     "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "14.1.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-import": "2.20.2",
     "eslint-plugin-jest": "23.8.2",
