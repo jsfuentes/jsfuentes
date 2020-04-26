@@ -1,0 +1,29 @@
+---
+title: "Toxic Idea #1: Find yourself"
+date: "2019-06-18T04:20:00.000Z"
+template: "post"
+draft: false
+slug: "toxic-idea-1-find-yourself"
+category: "Toxic"
+tags:
+  - "Life"
+  - "Toxic"
+description: "The whole idea implies that there is one true, unchanging self that you just need to discover. You were born to become something."
+socialImage: "https://cdn-images-1.medium.com/max/10148/0*TktZC2uPINSaFlQC"
+---
+
+> “Be your true self”
+
+> “Find your passion”
+
+The whole idea implies that there is one true, unchanging self that you just need to discover. You were born to become something. You just need to grab a shovel, use your heart(emotion) as your guide, and dig deep until you strike the one true shining core that will bring you comfort, happiness, and success.
+
+But, every single experience and decision changes who you are. Change may not be quick or easy, but it is constant. From a young age, your experience has crafted the thought patterns, world views, and unconscious emotional responses that compose who you are.
+
+When I was young, I learned to like Math mostly because I was good at it. And I was good at it mostly because I liked it enough to learn. So I crafted an identity as an analytic person and stuck to it. Science and math that’s for me. English and arts are for someone else.
+
+But, I now realize I just never nurtured that part of myself. That is the problem with an identity. By defining what you are, you are defining what you are not.
+
+But, every single moment is an opportunity to decide what type of person you want to be. You hold the chisel and decide which part of yourself to refine. Use the power wisely.
+
+![](https://cdn-images-1.medium.com/max/10148/0*TktZC2uPINSaFlQC)

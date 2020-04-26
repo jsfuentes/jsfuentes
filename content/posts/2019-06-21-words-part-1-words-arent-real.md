@@ -1,0 +1,36 @@
+---
+title: "Words —  Part 1 Words aren’t Real"
+date: "2019-06-21T04:20:00.000Z"
+template: "post"
+draft: false
+slug: "words-part-1-words-arent-real"
+category: "Words"
+tags:
+  - "Philosophy"
+description: "How did those digital scribbles create a mental image of a big cat in your mind? The word “tiger” looks nothing like an actual tiger."
+socialImage: "/media/tiger.jpeg"
+---
+
+![Tiger](/media/tiger.jpeg)
+
+Tiger!
+
+How did those digital scribbles create a mental image of a big cat in your mind? The word “tiger” looks nothing like an actual tiger.
+
+While learning English, a child doesn’t see a tiger and automatically think “tiger”. They might see a picture of a tiger with the word “tiger” underneath and make the association in their minds. “Tigers” are apex predators, big cats, four-legged, and vertically striped with whiskers and reddish-orange fur. “Tiger” the word that we say and write corresponds to a set of features in reality.
+
+### Words are not reality, they represent reality.
+
+What if the tiger is identical except it has no legs? What if it is the size of a microwave and has a white coat? Is it still a tiger? We could spend hours discussing the finer points of what it _actually_ means to be a tiger, but that would be a waste of time. We aren’t talking about reality anymore. We are talking about its representation in our minds.
+
+An explorer could search for centuries for the pure essence of what it *truly *means to be a tiger, but he will find nothing. There is no true essence of being a tiger because “tiger” as a category only exists in our minds. There are only individual tigers, each unique, that we find useful to group together under the word “tiger”.
+
+The problem is categorization is binary: it either is a tiger or it isn’t. But, reality is a messy spectrum. The features of what is generally considered a tiger are more present in some objects than others. The binary nature of language can make us think the line dividing “tiger” from “not tiger” cleanly exists in reality. But it doesn’t.
+
+The question “is it a tiger” only matters in how useful it is in understanding reality. Better questions would be “Will it eat me?” or “What does it do?”. There will be far less disagreement than about our arbitrary definitions.
+
+Are machines conscious? Is cereal soup? Am I a feminist? Is Coursera a platform? Is uncrustables ravioli?
+
+There are better questions to ask that will give you better answers.
+
+Should machines have legal rights? Do I advance the best interest of women? How well does Coursera scale?

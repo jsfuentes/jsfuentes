@@ -6,13 +6,13 @@ draft: false
 slug: "why-startups-are-better-to-work-for"
 category: "Startups"
 tags:
-  - "career"
-  - "startups"
+  - "Career"
+  - "Startups"
 description: "I basically chose less money for more work mostly because it was a startup and it was the right decision."
 socialImage: "/media/startup_books.jpg"
 ---
 
-![Photo by [Daria Nepriakhina](https://unsplash.com/@epicantus) on [Unsplash](https://unsplash.com)](/media/startup_books.jpg)
+![](/media/startup_books.jpg)
 
 Last fall as I started my last year at UCLA, I agonized over what to do as a graduate. I aggressively applied and interviewed and devoured career guides. And in the end, I chose a small 50 person startup over exciting companies like Facebook, Stripe, and Cruise. I basically chose less money for more work mostly because it was a startup and it was the right decision.
 
