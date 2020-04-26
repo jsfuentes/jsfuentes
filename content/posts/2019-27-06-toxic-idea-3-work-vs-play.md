@@ -1,6 +1,6 @@
 ---
 title: "Toxic Idea #3: Work vs Play"
-date: "2019-06-27T22:40:32.169Z"
+date: "2019-06-27T04:20:00.000Z"
 template: "post"
 draft: false
 slug: "toxic-idea-3-work-vs-play"

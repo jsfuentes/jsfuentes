@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-  url: "https://lumen.netlify.com",
+  url: "https://jsfuentes.com",
   pathPrefix: "/",
   title: "Perspectivies by Jorge Fuentes",
   subtitle: "Coding, productivity, book notes & reviews, and more",
@@ -19,16 +19,12 @@ module.exports = {
       label: "About me",
       path: "/pages/about",
     },
-    {
-      label: "Contact me",
-      path: "/pages/contacts",
-    },
   ],
   author: {
     name: "Jorge Fuentes",
     photo: "/photo.png",
     bio:
-      "Aspiring polymath, and coder. Currently a YC founder working on video first customer support at Slingshow.com",
+      "Aspiring polymath, coder, and founder. UCLA CS 2020. @FB @YC W20. Currently working on video first customer support at Slingshow.com",
     contacts: {
       email: "",
       facebook: "",
