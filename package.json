@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "jsfuentes",
-  "description": "Personal Website of jorge fuentes",
+  "description": "Personal Website of Jorge Fuentes",
   "main": "n/a",
   "scripts": {
     "develop": "yarn run clean && gatsby develop",
@@ -62,6 +62,7 @@
     "react": "^16.13.1",
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.13.1",
+    "react-headroom": "^3.0.0",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {

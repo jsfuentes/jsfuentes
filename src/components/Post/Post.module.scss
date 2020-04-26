@@ -4,7 +4,7 @@
 .post {
   &__footer {
     max-width: $layout-post-width;
-    margin: 0 auto;
+    margin: 1em auto;
     padding: 0 15px;
   }
 
@@ -34,6 +34,11 @@
     &:focus {
       color: $color-primary;
     }
+  }
+
+  &__authorContainer {
+    border-top: 1px solid $color-gray-border;
+    border-bottom: 1px solid $color-gray-border;
   }
 }
 

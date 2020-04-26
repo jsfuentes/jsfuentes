@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Post from "../components/Post";
 import { useSiteMetadata } from "../hooks";
 import type { MarkdownRemark } from "../types";
+import NavHeader from "../components/NavHeader";
 
 type Props = {
   data: {
@@ -24,13 +25,17 @@ const PostTemplate = ({ data }: Props) => {
     postDescription !== null ? postDescription : siteSubtitle;
 
   return (
-    <Layout
-      title={`${postTitle} - ${siteTitle}`}
-      description={metaDescription}
-      socialImage={socialImage}
-    >
-      <Post post={data.markdownRemark} />
-    </Layout>
+    <>
+      <NavHeader />
+
+      <Layout
+        title={`${postTitle} - ${siteTitle}`}
+        description={metaDescription}
+        socialImage={socialImage}
+      >
+        <Post post={data.markdownRemark} />
+      </Layout>
+    </>
   );
 };
 

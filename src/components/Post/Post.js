@@ -1,7 +1,7 @@
 // @flow strict
 import React from "react";
 import { Link } from "gatsby";
-import Author from "./Author";
+import Author from "../Author";
 import Comments from "./Comments";
 import Content from "./Content";
 import Meta from "./Meta";
@@ -20,18 +20,15 @@ const Post = ({ post }: Props) => {
 
   return (
     <div className={styles["post"]}>
-      <Link className={styles["post__home-button"]} to="/">
-        All Articles
-      </Link>
-
       <div className={styles["post__content"]}>
-        <Content body={html} title={title} />
+        <Content body={html} title={title} date={date} />
       </div>
 
       <div className={styles["post__footer"]}>
-        <Meta date={date} />
         {tags && tagSlugs && <Tags tags={tags} tagSlugs={tagSlugs} />}
-        <Author />
+        <div className={styles["post__authorContainer"]}>
+          <Author showBio={true} />
+        </div>
       </div>
 
       <div className={styles["post__comments"]}>

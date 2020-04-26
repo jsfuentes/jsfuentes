@@ -1,0 +1,56 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.header {
+  width: 100%;
+  height: 60px;
+  background: white;
+  box-shadow: 0 4px 15px $color-gray-bg;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  // Needed to stay above the popup
+  position: relative;
+  z-index: 1;
+
+  &.no-shadow {
+    box-shadow: none;
+  }
+
+  &__left {
+    margin-left: 1em;
+    margin-right: 1em;
+    max-width: 80rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    flex-grow: 1;
+
+    &-photo img {
+      border-radius: 50%;
+    }
+
+    &-name {
+      margin: 0 0 0 10px;
+
+      &-link {
+        color: $color-base;
+
+        &:hover {
+          color: $color-base;
+        }
+      }
+    }
+  }
+}
+
+.popup {
+  box-shadow: 0 4px 15px $color-gray-bg;
+  background: white;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+}

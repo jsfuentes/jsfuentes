@@ -6,14 +6,15 @@ draft: false
 slug: "why-startups-are-better-to-work-for"
 category: "Startups"
 tags:
-  - "Career"
-description: "Throughout my work, the most important factor in my ability to excel and learn is how meaningful and motivating it is. Meaningful work pushes me to work hard, learn so much, and enjoy doing it. Motivation supercharges learning which is really the most important thing for a young boy like me."
+  - "career"
+  - "startups"
+description: "I basically chose less money for more work mostly because it was a startup and it was the right decision."
 socialImage: "/media/startup_books.jpg"
 ---
 
 ![Photo by [Daria Nepriakhina](https://unsplash.com/@epicantus) on [Unsplash](https://unsplash.com)](/media/startup_books.jpg)
 
-Last fall as I started my last year at UCLA, I aggressively applied and interviewed for programming jobs. The decision agonized me for weeks and I devoured career guides and advice. And in the end, I chose a small 50 person startup over exciting companies like Facebook, Stripe, and Cruise. I basically chose less money for more work mostly because it was a startup.
+Last fall as I started my last year at UCLA, I agonized over what to do as a graduate. I aggressively applied and interviewed and devoured career guides. And in the end, I chose a small 50 person startup over exciting companies like Facebook, Stripe, and Cruise. I basically chose less money for more work mostly because it was a startup and it was the right decision.
 
 While the term startup is often thrown around, here are some traits I mean:
 
@@ -44,8 +45,8 @@ With a company on the line and so much work to do, anyone can seize as much resp
 
 ### Learn more general skills
 
-At Facebook, I had to learn my mentor’s quality assessment code built on top of my team’s custom data manipulation code built on top of Facebook’s internal data pipelining tool. Each layer added more confusion and made the knowledge less and less general. In the end, my Facebook internship taught me little I could use outside Facebook and this is the norm. But, startups building a codebase from scratch offer very general knowledge from the fundamentals. 
-And at a startup, you are directly interacting with everyone from marketing and product. Instead of hiding inside a tech niche, you are facing real problems and real people with different perspectives and worries. This is probably very underrated. Knowledge of the inner workings of business and people can make everything you do more effective. Especially when everyone else focuses just on the technical.
+At Facebook, I had to learn my mentor’s quality assessment code built on top of my team’s custom data manipulation code built on top of Facebook’s internal data pipelining tool. Each layer added more confusion and made the knowledge less and less general. In the end, my Facebook internship taught me little I could use outside Facebook and this is the norm. But, startups building a codebase from scratch offer fundamental coding knowledge. 
+And at a startup, you are directly interacting with everyone from marketing to product. Instead of hiding inside a tech niche, you are facing real practical problems and real people. This is probably very underrated. Knowledge of the inner workings of business and people can make everything you do more effective. Especially when everyone else focuses just on the technical.
 
 ### Learn faster
 

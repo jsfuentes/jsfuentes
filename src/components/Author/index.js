@@ -1,2 +1,2 @@
-// @flow strict
+// @flow
 export { default } from "./Author";
