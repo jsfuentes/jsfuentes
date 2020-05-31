@@ -12,11 +12,11 @@ description: "It’s pretty limiting, isn’t it? If I once had a childhood pass
 socialImage: "https://cdn-images-1.medium.com/max/12032/0*DgL_qBbWFEtSlChq"
 ---
 
-> “Just listen to your heart”
-
 > “Do what you love and you will never work a day in your life”
 
-> “Pursue your passion and everything else will fall into place.”
+> “Listen to your heart”
+
+> "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. And don't settle." - [Steve Jobs](https://youtu.be/UF8uR6Z6KLc?t=507)
 
 ![](https://cdn-images-1.medium.com/max/12032/0*DgL_qBbWFEtSlChq)
 

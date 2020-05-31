@@ -24,7 +24,7 @@ module.exports = {
     name: "Jorge Fuentes",
     photo: "/photo.png",
     bio:
-      "Aspiring polymath, coder, and founder. UCLA CS 2020. @FB founder @Slingshow YC W20. Currently working on video first customer support at Slingshow.com",
+      "Aspiring polymath, coder, and founder. founder @slingshow ycw20 former @fb @UCLA CS 2019",
     contacts: {
       email: "",
       facebook: "",
