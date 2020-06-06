@@ -3,7 +3,7 @@
 module.exports = {
   url: "https://jsfuentes.com",
   pathPrefix: "/",
-  title: "Perspectivies by Jorge Fuentes",
+  title: "Perspectives by Jorge Fuentes",
   subtitle: "Coding, productivity, book notes & reviews, and more",
   copyright: "© All rights reserved.",
   disqusShortname: "",
