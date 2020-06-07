@@ -1,0 +1,73 @@
+---
+title: "The Dependable Memory"
+date: "2015-03-03T04:20:00.000Z"
+template: "post"
+draft: false
+slug: "the-dependable-memory"
+category: "Creative Writing"
+tags:
+  - Life Lessons
+  - History
+  - Value
+description: "A footprint, a fingerprint, a seemingly misplaced grain of sand. When I finally leave this earth, what mark will I leave on this land?"
+socialImage: https://images.unsplash.com/photo-1518183261945-b0a0f1e1b4ed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80
+---
+
+\* In high school, I was told to write a 500 word essay answering the simple prompt, what legacy do I want to leave? I turned in this poem.
+
+![](https://images.unsplash.com/photo-1518183261945-b0a0f1e1b4ed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80)
+
+A footprint, a fingerprint, a seemingly misplaced grain of sand.  
+When I finally leave this earth, what mark will I leave on this land?  
+Erosion, entropy, the physical will wear away.  
+Besides, I don’t want a mummified corpse to be the way I stay.  
+With human intellect, there is other ways to keep hold.  
+For wherever there are humans, there are stories to be told,  
+But do we remember all the people who lived throughout the earth.  
+99% are dead, 99% forgotten, for better or for worse.  
+The kings, the queens, the heroic tales are remembered through the ages;  
+the poets and the scholars immortalized in their pages.  
+While the simple peasant could have vanished in an instant,  
+yet not a mark be left indicating their existence.  
+Death is a ritual for every human alive.  
+We toil and we sacrifice to see Satan’s vengeful eyes.  
+Billions could die at the snap of my fingers;  
+yet life would continue, the former individuals remembered by a figure
+
+The futility of attempting to leave a memory mirrors a seed wandering through space.  
+If it ever stops wandering, it is just another place.  
+Indubitably, any flower is admirable in isolation,  
+but in a flourishing meadow can be ignored without explanation.  
+A seed could just blossom with no one around to see,  
+and hopefully that single flower will increase the universe’s beauty.  
+A blacksmith, a farmer, a worker hidden in the mass,  
+essential to the world, yet forgotten to the past.  
+A honest work upon their brow, an uneventful life.  
+Shameful, humanity fails to recognize that type.  
+An elder with enough memories to pass the time;  
+his entire life seeming like an endless climb.  
+What did he accomplish in his effervescent wake?  
+Never holding hopes for changing his peasants fate.  
+His accomplishment significant, advancing the human race,  
+though his blossom among an orchard may have hid his face.  
+A memory forgotten, a name echoing no longer,  
+though his existence cemented in the humans he made stronger.
+
+Why would I desire any life with more!  
+Leaving an imprint on everchanging time is an incredible chore.  
+I believe there is untapped satisfaction in a life of simplicity,  
+never to be disappointed by memory’s duplicity.  
+Even if fickle popularity made me a celebrity,  
+I would remember there was no benefit to my memory.  
+So personally, I just want to be remembered for normality,  
+though only a few individuals will recall my life in totality.  
+Ideally, a few children will playfully run across,  
+and in death, a wife would solemnly mourn my loss.  
+“An honest man,” she would say, “Always gave it his all”  
+“Regretful he climbed so far, only to face his dreadful fall”  
+“Every weekday nine to five he labored at his desk”  
+She would recall, “He was happy enough I guess”  
+I have always valued the smallest things in life,  
+though I must similarly learn to accept the smallest strife.  
+So at the very least, I will progress evolution and pass on my genes,  
+but I shouldn’t consider that now for I am still just a teen.

@@ -1,9 +1,9 @@
 ---
-title: "So Your Not The Best"
+title: "So You're Not The Best"
 date: "2019-06-22T04:20:00.000Z"
 template: "post"
 draft: false
-slug: "so-your-not-the-best"
+slug: "so-youre-not-the-best"
 category: "Career"
 tags:
   - "Success"

@@ -4,14 +4,14 @@ date: "2019-11-21T04:20:00.000Z"
 template: "post"
 draft: false
 slug: "rule-2-prefer-hard-actions"
-category: "Life Lessons"
+category: "Philosophy"
 tags:
-  - "Motivation"
+  - "Philosophy"
 description: "Nihilism has been ever present in my mind for the last few years causing some bouts of hopelessness. But, I feel like my actions are meaningful and am not nihlistic. So I asked myself, do I have good reason to be?"
 socialImage: "https://images.unsplash.com/photo-1572223067743-126c40ebee71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2775&q=80"
 ---
 
-Nihilism has been ever present in my mind for the last few years causing some bouts of hopelessness. But, I feel like my actions are meaningful and am not nihlistic. So I asked myself, do I have good reason to be?
+Nihilism has been ever present in my mind for the last few years causing some bouts of hopelessness. But, I believe my actions are meaningful. So I asked myself, do I have good reason to?
 
 ![](https://images.unsplash.com/photo-1572223067743-126c40ebee71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2775&q=80)
 
