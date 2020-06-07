@@ -3,7 +3,7 @@ title: "Arguments Against Nihilism"
 date: "2019-11-21T04:20:00.000Z"
 template: "post"
 draft: false
-slug: "rule-2-prefer-hard-actions"
+slug: "arguments-against-nihilism"
 category: "Philosophy"
 tags:
   - "Philosophy"
