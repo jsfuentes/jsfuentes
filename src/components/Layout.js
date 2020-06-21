@@ -2,8 +2,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { withPrefix } from "gatsby";
-import { useSiteMetadata } from "../../hooks";
-import styles from "./Layout.module.scss";
+import { useSiteMetadata } from "../hooks";
 
 const Layout = ({ children, title, description, socialImage }) => {
   const { author, url } = useSiteMetadata();
@@ -11,7 +10,7 @@ const Layout = ({ children, title, description, socialImage }) => {
   const metaImageUrl = url + withPrefix(metaImage);
 
   return (
-    <div className={styles.layout}>
+    <div className="container border-1 border border-black bg-gray-200">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>

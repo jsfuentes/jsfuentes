@@ -2,6 +2,7 @@
 
 const siteConfig = require("./config.js");
 const postCssPlugins = require("./postcss-config.js");
+const tailwindConfig = require("./tailwind.config.js");
 
 module.exports = {
   pathPrefix: siteConfig.pathPrefix,
@@ -202,6 +203,18 @@ module.exports = {
         cssLoaderOptions: {
           camelCase: false,
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require(`tailwindcss`)(tailwindConfig),
+          require(`autoprefixer`),
+          ...(process.env.NODE_ENV === `production`
+            ? [require(`cssnano`)]
+            : []),
+        ],
       },
     },
     "gatsby-plugin-optimize-svgs",
