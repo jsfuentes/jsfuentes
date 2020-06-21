@@ -3,6 +3,7 @@
 const lost = require("lost");
 const pxtorem = require("postcss-pxtorem");
 const autoprefixer = require("autoprefixer");
+const tailwindcss = require("tailwindcss");
 
 module.exports = [
   lost(),
@@ -35,4 +36,5 @@ module.exports = [
     minPixelValue: 0,
   }),
   autoprefixer(),
+  tailwindcss(),
 ];

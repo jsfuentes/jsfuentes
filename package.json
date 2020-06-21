@@ -8,10 +8,9 @@
     "build": "yarn run clean && gatsby build",
     "deploy": "yarn run clean && gatsby build --prefix-paths && gh-pages -d public",
     "clean": "rimraf .cache public",
-    "flow": "flow",
     "lint:js": "eslint --cache --ext .js,.jsx .",
     "lint:scss": "stylelint \"src/**/*.scss\"",
-    "lint": "concurrently \"yarn run lint:js\" \"yarn run lint:scss\" \"yarn flow\"",
+    "lint": "concurrently \"yarn run lint:js\" \"yarn run lint:scss\"",
     "test": "jest --config ./jest/jest-config.js",
     "test:coverage": "jest --coverage --config ./jest/jest-config.js",
     "test:watch": "jest --watch --config ./jest/jest-config.js",
@@ -35,6 +34,7 @@
     "gatsby-plugin-netlify-cms": "^4.2.2",
     "gatsby-plugin-offline": "^3.1.2",
     "gatsby-plugin-optimize-svgs": "^1.0.4",
+    "gatsby-plugin-postcss": "^2.3.4",
     "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-plugin-sass": "^2.2.1",
     "gatsby-plugin-sharp": "^2.5.4",
@@ -89,8 +89,6 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
     "eslint-watch": "6.0.1",
-    "flow-bin": "^0.122.0",
-    "flow-typed": "^3.1.0",
     "gh-pages": "2.2.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "25.2.7",
@@ -102,6 +100,7 @@
     "rimraf": "3.0.2",
     "stylelint": "13.3.0",
     "stylelint-config-recommended-scss": "4.2.0",
-    "stylelint-scss": "3.16.0"
+    "stylelint-scss": "3.16.0",
+    "tailwindcss": "^1.4.6"
   }
 }
