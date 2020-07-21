@@ -10,7 +10,7 @@ const Layout = ({ children, title, description, socialImage }) => {
   const metaImageUrl = url + withPrefix(metaImage);
 
   return (
-    <div className="container border-1 border border-black bg-gray-200">
+    <div className="container flex justify-content items-center">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
