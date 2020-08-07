@@ -10,7 +10,7 @@ const Layout = ({ children, title, description, socialImage }) => {
   const metaImageUrl = url + withPrefix(metaImage);
 
   return (
-    <div className="container flex justify-content items-center">
+    <div className="flex justify-center items-center">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -22,7 +22,7 @@ const Layout = ({ children, title, description, socialImage }) => {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={metaImageUrl} />
       </Helmet>
-      {children}
+      <div className="container">{children}</div>
     </div>
   );
 };

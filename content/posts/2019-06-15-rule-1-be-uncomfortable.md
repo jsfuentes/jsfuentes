@@ -3,11 +3,11 @@ title: "Rule #1: Be uncomfortable"
 date: "2019-06-15T04:20:00.000Z"
 template: "post"
 draft: false
-slug: "be-uncomfortable"
+slug: "rule-1-be-uncomfortable"
 category: "Life Lessons"
 tags:
-  - "Life Lessons"
   - "Motivation"
+  - "Rules"
 description: "We overvalue actions that are easy and comfortable. These short term feelings push us away from decisions that will help us in the long term."
 ---
 

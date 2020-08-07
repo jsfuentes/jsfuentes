@@ -7,6 +7,7 @@ slug: "rule-2-prefer-hard-actions"
 category: "Life Lessons"
 tags:
   - "Motivation"
+  - "Rules"
 description: "When making a decision, inaction is the default. And people rarely change the default. Inaction is easy, comfortable, and risk-free. Action means taking responsibility and exerting energy."
 socialImage: "https://cdn-images-1.medium.com/max/7680/0*Z4YJhbzcLPJBK5Ri"
 ---
