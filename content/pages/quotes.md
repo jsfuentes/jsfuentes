@@ -124,6 +124,8 @@ There are no organizations without institutional habits. There are only places w
 
 ## Social
 
+“I'm not upset that you lied to me, I'm upset that from now on I can't believe you.”
+
 "humans are walking, talking status meters, constantly judging our worth and social standing by comparing ourselves with others today and with our own prior selves" - Johnathan Rauch
 
 Never attribute to malice that which is adequately explained by stupidity - Hanlon's razor
