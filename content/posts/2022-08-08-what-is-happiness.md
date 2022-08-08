@@ -1,0 +1,28 @@
+---
+title: "What is Happiness?"
+date: "2022-08-08T04:20:00.000Z"
+template: "post"
+draft: false
+slug: "what-is-happiness"
+category: "Philosophy"
+tags:
+  - "Success"
+description: "Why did it evolve? What is its purpose? Happiness is the positive signal that our mind creates when we do anything correlated to survival or reproduction."
+socialImage: "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+---
+
+Why did it evolve? What is its purpose?
+
+Happiness is the positive signal that our mind creates when we do anything correlated to survival or reproduction. The most basic sources of happiness are pleasurable responses to our most fundamental stimulus: food and sex.
+
+Moving up the complexity stack, there are all these ideas that historically correlated to evolutionary success: novelty, mastery, progress, autonomy, safety, and love. We evolved over eons to desire them. And importantly, [we pursue these desires directly, not evolutionary success](https://www.lesswrong.com/posts/XPErvb8m9FapXCjhA/adaptation-executers-not-fitness-maximizers). We want love and sex, not necessarily what that tended to produce: children. 
+
+Happiness from these complex desires arises from our minds understanding of the world. Safety is a complex desire, because it is not a direct response to the environment but an interpretation of it. Is the New York City Subway safe? That depends on your understanding of other people, the world, and you own vulnerability.  If you believed people are fundamentally good and loving, then you would feel safer around others. If I convinced you the righteous NYPD constantly monitor the subways with hidden cameras ready to respond at a moments notice, then you would feel safer regardless of whether that was true.
+
+Our mind is constantly assessing our world, setting goals, and evaluating our position in our world. Pursuing happiness and avoiding pain are the primary drivers of all our actions. It wouldn't make sense evolutionary for us to reach some ultimate state of happiness then stop everything. We don't have 5 kids then feel satisfied for life because you can always have more, do more. Happiness is a feeling that temporarily strikes you, not a state to be achieved. 
+
+So far, we have been talking more about pleasure, temporary responses to our environment, but happiness is more than that. There is a long term happiness of meaning and satisfaction. It's similar to a self respect and feeling of self actualization. When you are looking back at your life, are you pleased about who you are, what you have done, and what you are doing. Often meaning and purpose involves some connection to something beyond yourself, awe-inspiring. Often it involves strong relationships with other people.
+
+The Greeks had a similar distinction. Hedonia was the root of hedonism and focused on feeling good and sensual pleasures. Eudaimonia which roughly translates to the "good spirit" focuses on a fulfilling, flourishing life. Eudaimonia isn't a state of mind like hedonia, but more a state of being. Hedonia is a subjective response in your mind, but eudaimonia is judging your life to a real, objective standard. For [Aristotle](https://www.britannica.com/biography/Aristotle), eudaimonia is the highest human good and consists of properly executing our intended function as a good human being.
+
+Our culture takes too strong of a perspective on accepting all possible lives and values. I do believe it is possible to achieve happiness by transcending desire like a Buddhist monk. I do believe you could live a fairly satisfying life by constantly chasing fun and pleasure. But, I believe the ideal happiness is a combination of hedonia and eudaimonia, pleasure and meaning. Its taking pleasure in moment to moment progress towards a fulfilling and flourishing life. This goal is good for you, good for your family and friends, and good for the world. Everything you could want. 
