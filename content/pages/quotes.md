@@ -60,6 +60,8 @@ Life has no intrinsic worth, it is kept in motion by mere desire and illusion ~ 
 
 I don’t want to be happy, I just want to change the world ~ Aaron Swartz
 
+I didn’t understand that you can never get enough of something you don’t really need. ~ Ava
+
 You have been taught to devalue any honorable behavior that comes from obligation, convention, or expectation because it didn’t come from “you. What you really want, the book says, is not to desire things but to be desired. ~ Summary of Sadly Porn
 
 Find full reward
@@ -206,6 +208,8 @@ Friendship marks a life even more deeply than love. Love risks degenerating into
 
 Friendship is born at the moment when one man says to another What! You too? I thought that no one but myself ~ C.S. Lewis,The Four Loves
 
+There’s an intensification with silence, where you don’t have to present yourself as interesting or funny, and there’s a lot of freedom or joy in that. ~ Anon or Ava?
+
 # People So Important They Get Their Own Section
 
 ### NAVAL
@@ -252,17 +256,17 @@ Inspiration is perishable. Seize motivation
 
 ### Jordan Peterson
 
-"The future is where you go to die"
+The future is where you go to die
 
-"The ideal shames us all"
+The ideal shames us all
 
-"The soul of the individual eternally hungers for the heroism of genuine being, and willingness to take on that responsibility is identical to the decision to live a meaningful life. "
+The soul of the individual eternally hungers for the heroism of genuine being, and willingness to take on that responsibility is identical to the decision to live a meaningful life.
 
-“the line dividing good and evil cuts thorough. the heart of every human being. And who is willing to destroy a piece of his own heart?” - Gulag Archipelago by Aleksandr Solzhenitsyn
+The line dividing good and evil cuts thorough. the heart of every human being. And who is willing to destroy a piece of his own heart? ~ Gulag Archipelago by Aleksandr Solzhenitsyn
 
-Life sucks then you die - Chapter 4 rules of life
+Life sucks then you die ~ Chapter 4 rules of life
 
-When you have something to say silence is a lie - Chapter 4 rules of life
+When you have something to say silence is a lie ~ Chapter 4 rules of life
 
 # Definitions (Do it really be like that though?)
 
