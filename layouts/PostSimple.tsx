@@ -1,14 +1,13 @@
-import { useState, ReactNode } from 'react'
-import { Comments } from 'pliny/comments'
-import { formatDate } from 'pliny/utils/formatDate'
-import { CoreContent } from 'pliny/utils/contentlayer'
-import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
+import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
-import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import type { Blog } from 'contentlayer/generated'
+import { Comments } from 'pliny/comments'
+import { CoreContent } from 'pliny/utils/contentlayer'
+import { ReactNode, useState } from 'react'
 
 interface LayoutProps {
   content: CoreContent<Blog>
@@ -30,14 +29,14 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
         <div>
           <header>
             <div className="space-y-1 border-b border-gray-200 pb-10 text-center dark:border-gray-700">
-              <dl>
+              {/* <dl>
                 <div>
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                   </dd>
                 </div>
-              </dl>
+              </dl> */}
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
