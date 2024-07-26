@@ -24,7 +24,7 @@ export const getStaticProps = async () => {
     },
   }
 }
-
+ 
 export default function BlogPage({
   posts,
   initialDisplayPosts,

@@ -12,7 +12,8 @@
     "search": "cross-env NODE_OPTIONS='--experimental-json-modules' node -r esbuild-register ./scripts/search.mjs",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
-    "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts"
+    "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
+    "copynotes": "cp -R /Users/jfuentes/Notes/Notes/Books ./data/books"
   },
   "dependencies": {
     "@fontsource/inter": "4.5.2",
