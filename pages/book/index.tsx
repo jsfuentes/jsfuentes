@@ -5,6 +5,7 @@ import { sortedBlogPost, allCoreContent } from 'pliny/utils/contentlayer'
 import { InferGetStaticPropsType } from 'next'
 import { allBooks } from 'contentlayer/generated'
 import type { Book } from 'contentlayer/generated'
+import GoodreadsAllBooks from '@/components/GoodreadsAllBooks'
 
 export const POSTS_PER_PAGE = 5
 
@@ -36,6 +37,7 @@ export default function BlogPage({
   return (
     <>
       <PageSEO title={`Blog - ${siteMetadata.author}`} description={siteMetadata.description} />
+      <GoodreadsAllBooks />
       {books.map((book) => (
         <div>{JSON.stringify(book)}</div>
       ))}
