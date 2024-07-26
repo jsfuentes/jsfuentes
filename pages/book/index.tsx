@@ -3,42 +3,42 @@ import ListLayout from '@/layouts/ListLayout'
 import { PageSEO } from '@/components/SEO'
 import { sortedBlogPost, allCoreContent } from 'pliny/utils/contentlayer'
 import { InferGetStaticPropsType } from 'next'
-import { allBlogs } from 'contentlayer/generated'
-import type { Blog } from 'contentlayer/generated'
+import { allBooks } from 'contentlayer/generated'
+import type { Book } from 'contentlayer/generated'
 
 export const POSTS_PER_PAGE = 5
 
 export const getStaticProps = async () => {
-  const posts = sortedBlogPost(allBlogs) as Blog[]
-  const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE)
+  const books = allBooks
+
+  const initialDisplayPosts = books.slice(0, POSTS_PER_PAGE)
   const pagination = {
     currentPage: 1,
-    totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
+    totalPages: Math.ceil(books.length / POSTS_PER_PAGE),
   }
 
   return {
     props: {
       initialDisplayPosts: allCoreContent(initialDisplayPosts),
-      posts: allCoreContent(posts),
+      books: allCoreContent(books),
       pagination,
     },
   }
 }
 
 export default function BlogPage({
-  posts,
+  books,
   initialDisplayPosts,
   pagination,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  // console.log('BOOKS', books)
+
   return (
     <>
       <PageSEO title={`Blog - ${siteMetadata.author}`} description={siteMetadata.description} />
-      <ListLayout
-        posts={posts}
-        initialDisplayPosts={initialDisplayPosts}
-        pagination={pagination}
-        title="All Posts"
-      />
+      {books.map((book) => (
+        <div>{JSON.stringify(book)}</div>
+      ))}
     </>
   )
 }

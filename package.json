@@ -13,7 +13,8 @@
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
-    "copynotes": "cp -R /Users/jfuentes/Notes/Notes/Books ./data/books"
+    "copynotes": "cp -R /Users/jfuentes/Notes/Notes/Resources/Books ./data/booknotes",
+    "copynotes2": "sudo bash ./copynotes.sh"
   },
   "dependencies": {
     "@fontsource/inter": "4.5.2",
