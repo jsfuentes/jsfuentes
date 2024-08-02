@@ -45,7 +45,23 @@ export const Book = defineDocumentType(() => ({
   fields: {
     title: { type: 'string', required: true },
   },
-  // computedFields,
+  //THIS IS EXACTLY THE SAME AS ABOVE, but was erroring for some reason if you just used computedFields,
+  computedFields: {
+    readingTime: { type: 'json', resolve: (doc) => readingTime(doc.body.raw) },
+    slug: {
+      type: 'string',
+      resolve: (doc) => doc._raw.flattenedPath.replace(/^.+?(\/)/, ''),
+    },
+    path: {
+      type: 'string',
+      resolve: (doc) => doc._raw.flattenedPath,
+    },
+    filePath: {
+      type: 'string',
+      resolve: (doc) => doc._raw.sourceFilePath,
+    },
+    toc: { type: 'string', resolve: (doc) => extractTocHeadings(doc.body.raw) },
+  },
 }))
 
 export const Blog = defineDocumentType(() => ({

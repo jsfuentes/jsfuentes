@@ -3,12 +3,14 @@
 rm -rf ./data/booknotes
 mkdir -p ./data/booknotes
 
+# Copy Notes to .mdx
 find /Users/jfuentes/Notes/Notes/Resources/Books -type f -name "*.md" -exec sh -c 'cp "$0" "./data/booknotes/$(basename "${0%.md}").mdx"' {} \;
 
 for file in ./data/booknotes/*; do
   if [ -f "$file" ]; then
     temp_file=$(mktemp)
     
+    # Add frontmatter of title
     echo "---
 title: '$(basename "${file%.*}" | sed "s/'/''/g")'
 ---

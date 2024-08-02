@@ -9,14 +9,14 @@ import { Comments } from 'pliny/comments'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import { ReactNode, useState } from 'react'
 
-interface LayoutProps {
+interface SimpleProps {
   content: CoreContent<Blog>
   children: ReactNode
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
 }
 
-export default function PostLayout({ content, next, prev, children }: LayoutProps) {
+export default function PostSimple({ content, next, prev, children }: SimpleProps) {
   const [loadComments, setLoadComments] = useState(false)
 
   const { path, slug, date, title } = content
