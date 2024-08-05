@@ -13,14 +13,16 @@
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
-    "copynotes": "cp -R /Users/jfuentes/Notes/Notes/Resources/Books ./data/booknotes",
-    "copynotes2": "sudo bash ./copynotes.sh"
+    "copynotes": "sudo bash ./copynotes.sh",
+    "goodreads": "node goodreads.js"
   },
   "dependencies": {
     "@fontsource/inter": "4.5.2",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.7",
     "autoprefixer": "^10.4.0",
+    "axios": "^1.7.3",
+    "cheerio": "^1.0.0-rc.12",
     "contentlayer": "0.2.8",
     "esbuild": "0.14.38",
     "github-slugger": "^1.4.0",
