@@ -13,6 +13,7 @@
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
+    "refresh-books": "npm run copynotes && npm run goodreads",
     "copynotes": "sudo bash ./copynotes.sh",
     "goodreads": "node goodreads.js"
   },

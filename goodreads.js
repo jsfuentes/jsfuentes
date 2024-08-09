@@ -133,6 +133,15 @@ function ratingToNum(rating) {
   }
 }
 
+function slugify(title) {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '') // Remove all non-word characters (excluding whitespace and hyphens)
+    .replace(/[\s_-]+/g, '-') // Replace spaces and underscores with hyphens
+    .replace(/^-+|-+$/g, '') // Remove leading and trailing hyphens
+}
+
 async function main() {
   const browseAIData = await fetchBrowseAIData()
   console.log('BrowseAIData', browseAIData)
@@ -150,6 +159,7 @@ async function main() {
     review: extractGoodreadsReview(book.review_html),
     short_title: getShortenedTitle(book.title),
     rating_num: ratingToNum(book.rating),
+    slug: slugify(getShortenedTitle(book.title)),
   }))
 
   //Read the filepath and get json object there
