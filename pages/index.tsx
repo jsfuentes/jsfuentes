@@ -6,18 +6,31 @@ import { sortedBlogPost, allCoreContent } from 'pliny/utils/contentlayer'
 import { InferGetStaticPropsType } from 'next'
 import { allBlogs } from 'contentlayer/generated'
 import type { Blog } from 'contentlayer/generated'
+// import { MDXLayoutRenderer } from '@/components/MDXComponents'
+import { allAuthors } from 'contentlayer/generated'
+import { MDXLayoutRenderer } from 'pliny/mdx-components'
+import { MDXComponents } from '@/components/MDXComponents'
+
+const DEFAULT_LAYOUT = 'AuthorLayout'
 
 export const getStaticProps = async () => {
   const sortedPosts = sortedBlogPost(allBlogs) as Blog[]
   const posts = allCoreContent(sortedPosts)
+  const author = allAuthors.find((p) => p.slug === 'default')
 
-  return { props: { posts } }
+  return { props: { posts, author } }
 }
 
-export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Home({ posts, author }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+
+      <MDXLayoutRenderer
+        layout={author.layout || DEFAULT_LAYOUT}
+        content={author}
+        MDXComponents={MDXComponents}
+      />
 
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">

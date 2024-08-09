@@ -20,13 +20,12 @@ export default function BlogPage({ posts }: InferGetStaticPropsType<typeof getSt
   return (
     <>
       <PageSEO title={`Blog - ${siteMetadata.author}`} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 py-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            All Posts
-          </h1>
-        </div>
-        <ul className="mt-6">
+      <div className="space-y-2 py-6 md:space-y-5">
+        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          All Posts
+        </h1>
+        <div className="h-px w-full bg-gray-200 dark:bg-gray-700"></div>
+        <ul className="mt-8">
           {posts.map((post) => (
             <li key={post.slug} className="py-2">
               <article className="flex items-start space-x-6">
