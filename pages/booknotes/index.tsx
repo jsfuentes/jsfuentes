@@ -71,7 +71,7 @@ export default function BlogPage({ books }: InferGetStaticPropsType<typeof getSt
         const bookCards = groupedBooks[year].map((book) => <BookCard key={book.slug} book={book} />)
 
         return (
-          <div className="mb-8">
+          <div className="mb-8" key={year}>
             <div className="mb-4 text-3xl font-bold text-primary-500">{year}</div>
             <div className="flex flex-row flex-wrap items-start justify-start">{bookCards}</div>
           </div>

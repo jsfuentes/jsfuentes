@@ -1,44 +1,53 @@
 import siteMetadata from '@/data/siteMetadata'
-import ListLayout from '@/layouts/ListLayout'
 import { PageSEO } from '@/components/SEO'
 import { sortedBlogPost, allCoreContent } from 'pliny/utils/contentlayer'
 import { InferGetStaticPropsType } from 'next'
 import { allBlogs } from 'contentlayer/generated'
 import type { Blog } from 'contentlayer/generated'
-
-export const POSTS_PER_PAGE = 5
+import Link from 'next/link'
+import { formatDate } from 'pliny/utils/formatDate'
 
 export const getStaticProps = async () => {
   const posts = sortedBlogPost(allBlogs) as Blog[]
-  const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE)
-  const pagination = {
-    currentPage: 1,
-    totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
-  }
-
   return {
     props: {
-      initialDisplayPosts: allCoreContent(initialDisplayPosts),
       posts: allCoreContent(posts),
-      pagination,
     },
   }
 }
 
-export default function BlogPage({
-  posts,
-  initialDisplayPosts,
-  pagination,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function BlogPage({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <PageSEO title={`Blog - ${siteMetadata.author}`} description={siteMetadata.description} />
-      <ListLayout
-        posts={posts}
-        initialDisplayPosts={initialDisplayPosts}
-        pagination={pagination}
-        title="All Posts"
-      />
+      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+        <div className="space-y-2 py-6 md:space-y-5">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            All Posts
+          </h1>
+        </div>
+        <ul className="mt-6">
+          {posts.map((post) => (
+            <li key={post.slug} className="py-2">
+              <article className="flex items-start space-x-6">
+                <dl className="w-36 flex-shrink-0">
+                  <dt className="sr-only">Published on</dt>
+                  <dd className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                    <time dateTime={post.date}>{formatDate(post.date, siteMetadata.locale)}</time>
+                  </dd>
+                </dl>
+                <div>
+                  <h2 className="text-xl font-semibold">
+                    <Link href={`/blog/${post.slug}`} className="text-gray-900 dark:text-gray-100">
+                      {post.title}
+                    </Link>
+                  </h2>
+                </div>
+              </article>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   )
 }
