@@ -48,18 +48,32 @@ export default function BlogPostPage({
   prev,
   next,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  if (book._raw) {
-    return (
-      <MDXLayoutRenderer
-        layout={DEFAULT_LAYOUT}
-        content={book}
-        MDXComponents={MDXComponents}
-        toc={book.toc}
-        prev={prev}
-        next={next}
-      />
-    )
-  } else {
-    return <div>{book.title}</div>
-  }
+  return (
+    <div>
+      <div className="mb-8">
+        <div className="text-primary mb-2 text-3xl font-bold">Review </div>
+        {book.rating_num &&
+          [...Array(5)].map((_, i) => (
+            <span
+              key={i}
+              className={`text-xl ${i < book.rating_num ? 'text-yellow-400' : 'text-gray-300'}`}
+            >
+              ★
+            </span>
+          ))}
+        <div>{book.review}</div>
+      </div>
+
+      {book._raw && (
+        <MDXLayoutRenderer
+          layout={DEFAULT_LAYOUT}
+          content={book}
+          MDXComponents={MDXComponents}
+          toc={book.toc}
+          prev={prev}
+          next={next}
+        />
+      )}
+    </div>
+  )
 }
