@@ -68,7 +68,7 @@ export default function BlogPage({ books }: InferGetStaticPropsType<typeof getSt
       </p>
       {/* <GoodreadsAllBooks /> */}
       {sortedYears.map((year) => {
-        const bookCards = groupedBooks[year].map((book) => <BookCard book={book} />)
+        const bookCards = groupedBooks[year].map((book) => <BookCard key={book.slug} book={book} />)
 
         return (
           <div className="mb-8">
