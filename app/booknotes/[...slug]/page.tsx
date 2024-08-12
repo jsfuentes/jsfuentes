@@ -72,14 +72,18 @@ export async function generateStaticParams() {
 
 export default async function BookPage({ params }: { params: { slug: string[] } }) {
   const slug = decodeURI(params.slug.join('/'))
-  const bookIndex = combinedBooks.findIndex((p) => p.slug === slug)
-  const book = combinedBooks[bookIndex]
+  const sortedBooks = combinedBooks.sort((a, b) => {
+    if (!a.read_date || !b.read_date) return 0
+    return new Date(b.read_date) < new Date(a.read_date) ? -1 : 1
+  })
+  const bookIndex = sortedBooks.findIndex((p) => p.slug === slug)
+  const book = sortedBooks[bookIndex]
   if (bookIndex === -1 || !book) {
     return notFound()
   }
 
-  const prev = combinedBooks[bookIndex + 1]
-  const next = combinedBooks[bookIndex - 1]
+  const prev = sortedBooks[bookIndex + 1]
+  const next = sortedBooks[bookIndex - 1]
 
   const Layout = layouts[book.layout || DEFAULT_LAYOUT]
 

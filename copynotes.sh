@@ -33,4 +33,7 @@ done
 
 chmod -R 777 ./data/booknotes
 
-echo "All files have been processed."
+# Count the number of files in the booknotes directory
+file_count=$(find ./data/booknotes -type f | wc -l)
+
+echo "All files have been processed. $file_count files have been copied."
