@@ -2,25 +2,12 @@ import siteMetadata from '@/data/siteMetadata'
 import { PageSEO } from '@/components/SEO'
 import { InferGetStaticPropsType } from 'next'
 import Link from 'next/link'
-import { allBooks } from 'contentlayer/generated'
 import GoodreadsAllBooks from '@/components/GoodreadsAllBooks'
-import goodreadsScrape from '@/../goodreadsScrape.json'
+import { combinedBooks } from '@/utils/combinedBooks'
 
 const MAX_REVIEW_LENGTH = 600
 
 export const getStaticProps = async () => {
-  const combinedBooks = goodreadsScrape.map((scrapeBook) => {
-    const book = allBooks.find(
-      (book) =>
-        scrapeBook.short_title.toLowerCase() === book.title.split('-')[0].trim().toLowerCase()
-    )
-
-    return {
-      ...book,
-      ...scrapeBook,
-    }
-  })
-
   return {
     props: {
       books: combinedBooks,
@@ -72,7 +59,12 @@ export default function BlogPage({ books }: InferGetStaticPropsType<typeof getSt
 
         return (
           <div className="mb-8" key={year}>
-            <div className="mb-4 text-3xl font-bold text-primary-500">{year}</div>
+            <div className="mb-4 text-3xl font-bold text-primary-500">
+              {year}{' '}
+              <span className="font-semibold text-gray-600 dark:text-gray-400">
+                ({bookCards.length})
+              </span>
+            </div>
             <div className="flex flex-row flex-wrap items-start justify-start">{bookCards}</div>
           </div>
         )

@@ -5,7 +5,7 @@ import 'katex/dist/katex.css'
 import '@/css/docsearch.css'
 import '@docsearch/css'
 
-import '@fontsource/inter/variable-full.css'
+import '@fontsource/inter'
 
 import { ThemeProvider } from 'next-themes'
 import type { AppProps } from 'next/app'

@@ -11,8 +11,14 @@ const CustomLink = ({
 
   if (isInternalLink) {
     return (
-      <Link href={href}>
-        <a {...rest} />
+      <Link
+        href={href}
+        className={rest.className}
+        aria-label={rest['aria-label']}
+        onClick={rest.onClick}
+        rel={rest.rel}
+      >
+        {rest.children}
       </Link>
     )
   }

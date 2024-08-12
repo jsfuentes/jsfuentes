@@ -1,6 +1,4 @@
-![tailwind-nextjs-banner](/public/static/images/twitter-card.png)
-
-# Tailwind Nextjs Starter Blog
+# Personal Website
 
 [From this base](https://GitHub.com/timlrx/tailwind-nextjs-starter-blog/stargazers/)
 

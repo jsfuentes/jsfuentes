@@ -65,6 +65,16 @@ module.exports = () => {
     eslint: {
       dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
     },
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'images-na.ssl-images-amazon.com',
+          port: '',
+          pathname: '/images/**',
+        },
+      ],
+    },
     async headers() {
       return [
         {
