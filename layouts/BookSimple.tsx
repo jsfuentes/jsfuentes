@@ -1,32 +1,26 @@
 import Link from '@/components/Link'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import SectionContainer from '@/components/SectionContainer'
-import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
-import { Comments } from 'pliny/comments'
-import { ReactNode, useState } from 'react'
+import { ReactNode } from 'react'
 import Image from 'next/image'
 import { combinedBooks } from '@/utils/combinedBooks'
+import Comments from '@/components/Comments'
 
 interface SimpleProps {
-  content: typeof combinedBooks[0]
+  content: (typeof combinedBooks)[0]
   children: ReactNode
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
 }
 
 export default function BookSimple({ content, next, prev, children }: SimpleProps) {
-  const [loadComments, setLoadComments] = useState(false)
   console.log('Content', content)
 
   const { slug, title, author, publish_date, book_image, rating_num, review } = content
 
   return (
     <SectionContainer>
-      <PageSEO
-        title={`${title} - ${siteMetadata.author}`}
-        description={review || siteMetadata.description}
-      />
       <ScrollTopAndComment />
       <article>
         <div>
@@ -35,7 +29,7 @@ export default function BookSimple({ content, next, prev, children }: SimpleProp
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-              <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">
+              <div className="dark:prose-dark prose max-w-none pb-8 pt-10">
                 <div className="mb-8 flex flex-col items-center md:flex-row md:items-start">
                   {book_image && (
                     <div className="mb-4 w-32 flex-none rounded-lg shadow-md md:mb-0 md:mr-6">
@@ -65,16 +59,13 @@ export default function BookSimple({ content, next, prev, children }: SimpleProp
                     {review && <p>{review}</p>}
                   </div>
                 </div>
-                <h2 className="mt-8 mb-4 text-2xl font-bold">Notes</h2>
+                <h2 className="mb-4 mt-8 text-2xl font-bold">Notes</h2>
                 {children}
               </div>
             </div>
             {siteMetadata.comments && (
-              <div className="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300" id="comment">
-                {!loadComments && (
-                  <button onClick={() => setLoadComments(true)}>Load Comments</button>
-                )}
-                {loadComments && <Comments commentsConfig={siteMetadata.comments} slug={slug} />}
+              <div className="pb-6 pt-6 text-center text-gray-700 dark:text-gray-300" id="comment">
+                <Comments slug={slug} />
               </div>
             )}
             <footer>
