@@ -1,17 +1,22 @@
 import ListLayout from '@/layouts/ListLayoutWithTags'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
-import { genPageMetadata } from 'app/seo'
 import { fetchMilkAndCookiesRSS, fetchSpringWillComeAgainRSS } from '@/utils/rssFeeds'
 
 const POSTS_PER_PAGE = 5
 
-export const metadata = genPageMetadata({ title: 'Blog' })
+export const generateStaticParams = async () => {
+  const totalPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE)
+  const paths = Array.from({ length: totalPages }, (_, i) => ({ page: (i + 1).toString() }))
 
-export default async function BlogPage() {
+  return paths
+}
+
+export default async function Page({ params }: { params: { page: string } }) {
   const blogPosts = allCoreContent(sortPosts(allBlogs))
   const rssFeeds = await Promise.all([fetchMilkAndCookiesRSS(), fetchSpringWillComeAgainRSS()])
   const rssItems = [...rssFeeds[0], ...rssFeeds[1]]
+  console.log('RSSITEMS', rssItems)
 
   const posts = [
     ...blogPosts.map((post) => ({
@@ -30,7 +35,7 @@ export default async function BlogPage() {
     })),
   ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
-  const pageNumber = 1
+  const pageNumber = parseInt(params.page as string)
   const initialDisplayPosts = posts.slice(
     POSTS_PER_PAGE * (pageNumber - 1),
     POSTS_PER_PAGE * pageNumber
@@ -42,9 +47,7 @@ export default async function BlogPage() {
 
   return (
     <ListLayout
-      //@ts-ignore
       posts={posts}
-      //@ts-ignore
       initialDisplayPosts={initialDisplayPosts}
       pagination={pagination}
       title="All Posts"
