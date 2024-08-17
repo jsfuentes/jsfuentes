@@ -14,21 +14,22 @@ export default async function BlogPage() {
   const rssItems = [...rssFeeds[0], ...rssFeeds[1]]
   console.log('RSSITEMS', rssItems)
 
-  const posts = blogPosts
-    .map((post) => ({
+  const posts = [
+    ...blogPosts.map((post) => ({
       ...post,
       type: 'post',
-    }))
-    .concat(
-      rssItems.map((item) => ({
-        ...item,
-        type: 'rss',
-        date: item.pubDate,
-      }))
-    )
-    .sort(
-      (a, b) => new Date(b.pubDate || b.date).getTime() - new Date(a.pubDate || a.date).getTime()
-    )
+    })),
+    ...rssItems.map((item) => ({
+      ...item,
+      type: 'rss',
+      date: item.pubDate || '',
+      tags: [], // Assuming tags are not provided for RSS items
+      readingTime: '', // Assuming readingTime is not applicable for RSS items
+      slug: '', // Assuming slug is not applicable for RSS items
+      path: '', // Assuming path is not applicable for RSS items
+      structuredData: {}, // Assuming structuredData is not applicable for RSS items
+    })),
+  ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
   const pageNumber = 1
   const initialDisplayPosts = posts.slice(
@@ -43,6 +44,7 @@ export default async function BlogPage() {
   return (
     <ListLayout
       posts={posts}
+      //@ts-ignore
       initialDisplayPosts={initialDisplayPosts}
       pagination={pagination}
       title="All Posts"
