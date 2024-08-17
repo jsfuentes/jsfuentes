@@ -10,7 +10,7 @@ import { combinedBooks } from '@/utils/combinedBooks'
 import Comments from '@/components/Comments'
 
 interface SimpleProps {
-  content: typeof combinedBooks[0]
+  content: (typeof combinedBooks)[0]
   children: ReactNode
   next?: { slug: string; title: string }
   prev?: { slug: string; title: string }
@@ -19,7 +19,17 @@ interface SimpleProps {
 export default function BookSimple({ content, next, prev, children }: SimpleProps) {
   console.log('Content', content, next, prev)
 
-  const { slug, title, author, publish_date, book_image, rating_num, review, read_date, goodreads_link } = content
+  const {
+    slug,
+    title,
+    author,
+    publish_date,
+    book_image,
+    rating_num,
+    review,
+    read_date,
+    goodreads_link,
+  } = content
 
   return (
     <SectionContainer>
