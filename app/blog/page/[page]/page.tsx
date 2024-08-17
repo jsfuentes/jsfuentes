@@ -47,7 +47,9 @@ export default async function Page({ params }: { params: { page: string } }) {
 
   return (
     <ListLayout
+      //@ts-ignore
       posts={posts}
+      //@ts-ignore
       initialDisplayPosts={initialDisplayPosts}
       pagination={pagination}
       title="All Posts"

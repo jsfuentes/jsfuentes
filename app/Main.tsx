@@ -35,8 +35,8 @@ export default async function Main({ posts }) {
 
   return (
     <>
-      <div className="flex w-full flex-row items-center justify-center">
-        <div className="flex flex-row items-center pt-8">
+      <div className="flex flex-row items-center justify-center">
+        <div className="flex flex-row items-center justify-center rounded-lg border-2 border-dashed border-gray-200 p-8 dark:border-gray-700">
           {mainAuthorContent.avatar && (
             <Image
               src={mainAuthorContent.avatar}
