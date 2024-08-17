@@ -9,11 +9,12 @@ const POSTS_PER_PAGE = 5
 export const metadata = genPageMetadata({ title: 'Blog' })
 
 export default async function BlogPage() {
-  const posts = allCoreContent(sortPosts(allBlogs))
+  const blogPosts = allCoreContent(sortPosts(allBlogs))
   const rssFeeds = await Promise.all([fetchMilkAndCookiesRSS(), fetchSpringWillComeAgainRSS()])
   const rssItems = [...rssFeeds[0], ...rssFeeds[1]]
+  console.log('RSSITEMS', rssItems)
 
-  const combinedPosts = posts
+  const posts = blogPosts
     .map((post) => ({
       ...post,
       type: 'post',
@@ -22,6 +23,7 @@ export default async function BlogPage() {
       rssItems.map((item) => ({
         ...item,
         type: 'rss',
+        date: item.pubDate,
       }))
     )
     .sort(

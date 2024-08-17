@@ -26,11 +26,10 @@ export default async function Main({ posts }) {
       rssItems.map((item) => ({
         ...item,
         type: 'rss',
+        date: item.pubDate,
       }))
     )
-    .sort(
-      (a, b) => new Date(b.pubDate || b.date).getTime() - new Date(a.pubDate || a.date).getTime()
-    )
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
   return (
     <>
