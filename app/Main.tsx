@@ -8,6 +8,8 @@ import AuthorLayout from '@/layouts/AuthorLayout'
 import { genPageMetadata } from 'app/seo'
 import { coreContent } from 'pliny/utils/contentlayer'
 import { fetchMilkAndCookiesRSS, fetchSpringWillComeAgainRSS } from '@/utils/rssFeeds'
+import SocialIcon from '@/components/social-icons'
+import Image from '@/components/Image'
 
 export const metadata = genPageMetadata({ title: 'About' })
 
@@ -33,13 +35,36 @@ export default async function Main({ posts }) {
 
   return (
     <>
-      <AuthorLayout content={mainAuthorContent}>
-        <MDXLayoutRenderer code={author.body.code} />
-      </AuthorLayout>
+      <div className="flex w-full flex-row items-center justify-center">
+        <div className="flex flex-row items-center pt-8">
+          {mainAuthorContent.avatar && (
+            <Image
+              src={mainAuthorContent.avatar}
+              alt="avatar"
+              width={192}
+              height={192}
+              className="h-42 w-42 rounded-full"
+            />
+          )}
+          <div className="ml-5 flex flex-col">
+            <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">
+              {mainAuthorContent.name}
+            </h3>
+            <div className="text-gray-500 dark:text-gray-400">{mainAuthorContent.occupation}</div>
+            <div className="text-gray-500 dark:text-gray-400">{mainAuthorContent.company}</div>
+            <div className="flex space-x-3 pt-6">
+              <SocialIcon kind="mail" href={`mailto:${mainAuthorContent.email}`} />
+              <SocialIcon kind="github" href={mainAuthorContent.github} />
+              <SocialIcon kind="linkedin" href={mainAuthorContent.linkedin} />
+              <SocialIcon kind="twitter" href={mainAuthorContent.twitter} />
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            All Posts
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            Writings
           </h1>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
