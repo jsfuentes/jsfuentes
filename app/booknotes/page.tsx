@@ -70,7 +70,7 @@ function BookCard({ book }) {
   return (
     <Link
       href={`/booknotes/${book.slug}`}
-      className="hover:border-1 mb-2 flex w-full flex-col rounded-lg border border-transparent p-4 hover:cursor-pointer hover:border-gray-700  hover:bg-gray-800 md:w-1/2 md:flex-row"
+      className="hover:border-1 mb-2 flex w-full flex-col rounded-lg border border-transparent p-4 hover:cursor-pointer hover:border-gray-300 hover:bg-gray-100 hover:dark:border-gray-700  hover:dark:bg-gray-800 md:w-1/2 md:flex-row"
     >
       <div className="mb-2 whitespace-nowrap text-sm text-gray-400 md:mb-0 md:mr-4">
         {book.read_date}
