@@ -2,13 +2,32 @@ import ListLayout from '@/layouts/ListLayoutWithTags'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
 import { genPageMetadata } from 'app/seo'
+import { fetchMilkAndCookiesRSS, fetchSpringWillComeAgainRSS } from '@/utils/rssFeeds'
 
 const POSTS_PER_PAGE = 5
 
 export const metadata = genPageMetadata({ title: 'Blog' })
 
-export default function BlogPage() {
+export default async function BlogPage() {
   const posts = allCoreContent(sortPosts(allBlogs))
+  const rssFeeds = await Promise.all([fetchMilkAndCookiesRSS(), fetchSpringWillComeAgainRSS()])
+  const rssItems = [...rssFeeds[0], ...rssFeeds[1]]
+
+  const combinedPosts = posts
+    .map((post) => ({
+      ...post,
+      type: 'post',
+    }))
+    .concat(
+      rssItems.map((item) => ({
+        ...item,
+        type: 'rss',
+      }))
+    )
+    .sort(
+      (a, b) => new Date(b.pubDate || b.date).getTime() - new Date(a.pubDate || a.date).getTime()
+    )
+
   const pageNumber = 1
   const initialDisplayPosts = posts.slice(
     POSTS_PER_PAGE * (pageNumber - 1),

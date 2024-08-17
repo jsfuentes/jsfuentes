@@ -7,12 +7,30 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import AuthorLayout from '@/layouts/AuthorLayout'
 import { genPageMetadata } from 'app/seo'
 import { coreContent } from 'pliny/utils/contentlayer'
+import { fetchMilkAndCookiesRSS, fetchSpringWillComeAgainRSS } from '@/utils/rssFeeds'
 
 export const metadata = genPageMetadata({ title: 'About' })
 
-export default function Home({ posts }) {
+export default async function Main({ posts }) {
   const author = allAuthors.find((p) => p.slug === 'default') as Authors
   const mainAuthorContent = coreContent(author)
+  const rssFeeds = await Promise.all([fetchMilkAndCookiesRSS(), fetchSpringWillComeAgainRSS()])
+  const rssItems = [...rssFeeds[0], ...rssFeeds[1]]
+
+  const combinedPosts = posts
+    .map((post) => ({
+      ...post,
+      type: 'post',
+    }))
+    .concat(
+      rssItems.map((item) => ({
+        ...item,
+        type: 'rss',
+      }))
+    )
+    .sort(
+      (a, b) => new Date(b.pubDate || b.date).getTime() - new Date(a.pubDate || a.date).getTime()
+    )
 
   return (
     <>
@@ -26,21 +44,26 @@ export default function Home({ posts }) {
           </h1>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
-          {posts.map((post) => {
-            const { slug, date, title } = post
+          {!combinedPosts.length && 'No posts or RSS items found.'}
+          {combinedPosts.map((item, index) => {
+            const { slug, date, title, link, pubDate, type } = item
             return (
-              <li key={slug} className="py-4">
+              <li key={slug || index} className="py-4">
                 <article className="flex items-center justify-between">
                   <dl>
                     <dt className="sr-only">Published on</dt>
                     <dd className="text-base font-medium text-gray-500 dark:text-gray-400">
-                      <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                      <time dateTime={date || pubDate}>
+                        {formatDate(date || pubDate, siteMetadata.locale)}
+                      </time>
                     </dd>
                   </dl>
                   <div>
                     <h2 className="text-xl font-bold leading-8 tracking-tight">
-                      <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
+                      <Link
+                        href={type === 'post' ? `/blog/${slug}` : link}
+                        className="text-gray-900 dark:text-gray-100"
+                      >
                         {title}
                       </Link>
                     </h2>
