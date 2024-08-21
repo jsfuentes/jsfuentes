@@ -36,7 +36,7 @@ export default async function Main({ posts }) {
   return (
     <>
       <div className="flex flex-row items-center justify-center">
-        <div className="flex flex-row items-center justify-center rounded-lg border-2 border-dashed border-gray-200 p-8 dark:border-gray-700">
+        <div className="flex flex-col md:flex-row items-center justify-center rounded-lg border-2 border-dashed border-gray-200 p-8 dark:border-gray-700">
           {mainAuthorContent.avatar && (
             <Image
               src={mainAuthorContent.avatar}
@@ -46,7 +46,7 @@ export default async function Main({ posts }) {
               className="h-42 w-42 rounded-full"
             />
           )}
-          <div className="ml-5 flex flex-col">
+          <div className="md:ml-5 flex flex-col items-center md:items-start">
             <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">
               {mainAuthorContent.name}
             </h3>
@@ -73,7 +73,7 @@ export default async function Main({ posts }) {
             const { slug, date, title, link, pubDate, type } = item
             return (
               <li key={slug || index} className="py-4">
-                <article className="flex items-center justify-between">
+                <article className="flex flex-col md:flex-row items-center justify-between">
                   <dl>
                     <dt className="sr-only">Published on</dt>
                     <dd className="text-base font-medium text-gray-500 dark:text-gray-400">
