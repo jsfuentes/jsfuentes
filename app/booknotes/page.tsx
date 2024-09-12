@@ -10,7 +10,6 @@ export const metadata = genPageMetadata({ title: 'Book Notes' })
 export default async function BlogPage() {
   const books = combinedBooks
 
-  console.log('BOOKS', books)
   // Group books by publish_year and sort by publish_date
   const groupedBooks = books.reduce((acc, book) => {
     const year = book.read_year || 'Unknown'

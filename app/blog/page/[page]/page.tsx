@@ -16,7 +16,6 @@ export default async function Page({ params }: { params: { page: string } }) {
   const blogPosts = allCoreContent(sortPosts(allBlogs))
   const rssFeeds = await Promise.all([fetchMilkAndCookiesRSS(), fetchSpringWillComeAgainRSS()])
   const rssItems = [...rssFeeds[0], ...rssFeeds[1]]
-  console.log('RSSITEMS', rssItems)
 
   const posts = [
     ...blogPosts.map((post) => ({
