@@ -45,7 +45,6 @@ async function fetchBrowseAIData() {
 
 async function getPreviewImage(url) {
   try {
-    console.log('getPreviewImage', url)
     // Fetch the HTML content of the page
     const { data } = await axios.get(url)
 
@@ -81,7 +80,6 @@ function readFile(filePath) {
   try {
     const fileContent = fs.readFileSync(filePath, 'utf8')
     const existingData = JSON.parse(fileContent)
-    console.log(`Existing data loaded from ${filePath}. Found ${existingData.length} entries.`)
     return existingData
   } catch (error) {
     if (error.code === 'ENOENT') {
@@ -111,7 +109,6 @@ function getShortenedTitle(title) {
     const result = match[0].trim() // Trim any leading or trailing whitespace
     return result
   } else {
-    console.log('No match found????')
     return title
   }
 }
@@ -144,14 +141,11 @@ function slugify(title) {
 
 async function main() {
   const browseAIData = await fetchBrowseAIData()
-  console.log('BrowseAIData', browseAIData)
   const robotTasks = browseAIData.result.robotTasks.items
   const capturedDataTempUrl = robotTasks[robotTasks.length - 1].capturedDataTemporaryUrl
-  console.log('captured', capturedDataTempUrl)
 
   const resp = await axios.get(capturedDataTempUrl)
   const goodreadsRaw = resp.data.capturedLists.my_goodreads
-  console.log('GoodreadsRaw', goodreadsRaw.length, goodreadsRaw[goodreadsRaw.length - 1])
 
   const goodreadsList = goodreadsRaw.map((book) => ({
     ...book,
@@ -185,7 +179,6 @@ async function main() {
   )
 
   fs.writeFileSync(filePath, JSON.stringify(updatedData, null, 2))
-  console.log(`JSON file has been saved to ${filePath}`)
 }
 
 main()

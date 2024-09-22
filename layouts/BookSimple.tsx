@@ -17,7 +17,6 @@ interface SimpleProps {
 }
 
 export default function BookSimple({ content, next, prev, children }: SimpleProps) {
-  console.log('Content', content, next, prev)
 
   const {
     slug,

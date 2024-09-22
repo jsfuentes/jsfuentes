@@ -35,8 +35,8 @@ export default async function Main({ posts }) {
 
   return (
     <>
-      <div className="flex flex-row items-center justify-center">
-        <div className="flex flex-col md:flex-row items-center justify-center rounded-lg border-2 border-dashed border-gray-200 p-8 dark:border-gray-700">
+      <div className="flex flex-col items-center justify-center md:flex-row">
+        <div className="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-200 p-8 dark:border-gray-700 md:flex-row">
           {mainAuthorContent.avatar && (
             <Image
               src={mainAuthorContent.avatar}
@@ -46,7 +46,7 @@ export default async function Main({ posts }) {
               className="h-42 w-42 rounded-full"
             />
           )}
-          <div className="md:ml-5 flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center md:ml-5 md:items-start">
             <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">
               {mainAuthorContent.name}
             </h3>
@@ -60,6 +60,10 @@ export default async function Main({ posts }) {
             </div>
           </div>
         </div>
+        {/* <div className="mt-4 w-full text-center text-gray-600 dark:text-gray-400 md:w-1/2">
+          Welcome to my blog! Here, I share my thoughts, experiences, and insights on various topics
+          that inspire me. I hope you find something that resonates with you.
+        </div> */}
       </div>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
@@ -73,7 +77,7 @@ export default async function Main({ posts }) {
             const { slug, date, title, link, pubDate, type } = item
             return (
               <li key={slug || index} className="py-4">
-                <article className="flex flex-col md:flex-row items-center justify-between">
+                <article className="flex flex-col items-center justify-between md:flex-row">
                   <dl>
                     <dt className="sr-only">Published on</dt>
                     <dd className="text-base font-medium text-gray-500 dark:text-gray-400">
