@@ -91,9 +91,11 @@ function BookCard({ book }) {
             <div>
               <h3 className="text-lg font-semibold">{book.title}</h3>
               <p className="mb-1 text-gray-300">by {book.author}</p>
-              <p className="mb-2 text-xs text-gray-400">
-                {new Date(book.publish_date).getFullYear()}
-              </p>
+              {book.publish_date && (
+                <p className="mb-2 text-xs text-gray-400">
+                  {new Date(book.publish_date).getFullYear()}
+                </p>
+              )}
             </div>
           </div>
         </div>
