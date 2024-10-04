@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-nextjs-starter-blog",
+  "name": "jorge-blog",
   "version": "2.2.0",
   "private": true,
   "scripts": {
@@ -24,6 +24,7 @@
     "body-scroll-lock": "^4.0.0-beta.0",
     "cheerio": "^1.0.0",
     "contentlayer2": "0.4.6",
+    "dotenv": "^16.4.5",
     "esbuild": "0.20.2",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.2",

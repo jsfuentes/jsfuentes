@@ -33,7 +33,7 @@ export async function generateMetadata({
     return
   }
 
-  const publishedAt = new Date(book.publish_date).toISOString()
+  const publishedAt = book.publish_date && new Date(book.publish_date).toISOString()
   let imageList = [siteMetadata.socialBanner]
   if (book.book_image) {
     imageList = [book.book_image]

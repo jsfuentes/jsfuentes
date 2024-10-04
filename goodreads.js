@@ -2,17 +2,17 @@ const axios = require('axios')
 const cheerio = require('cheerio')
 const fs = require('fs')
 const path = require('path')
+require('dotenv').config()
 
 const GOODREADS_FILE_PATH = 'goodreadsScrape.json'
 
 async function fetchBrowseAIData() {
   try {
     const response = await axios.get(
-      'https://api.browse.ai/v2/robots/2d4b81c3-3c57-43a6-8af4-91521554aa00/tasks',
+      'https://api.browse.ai/v2/robots/c64368c6-42f3-4750-8497-7b8cf1bf3ece/tasks',
       {
         headers: {
-          Authorization:
-            'Bearer f12cb695-a030-4bbe-adf8-fcdb06ac2f76:281f0c78-0319-4785-8659-aacbd17710d1',
+          Authorization: `Bearer ${process.env.BROWSE_AI_API_KEY}`,
         },
       }
     )
@@ -144,9 +144,10 @@ async function main() {
   const robotTasks = browseAIData.result.robotTasks.items
   const capturedDataTempUrl = robotTasks[robotTasks.length - 1].capturedDataTemporaryUrl
 
+  // console.log(capturedDataTempUrl)
   const resp = await axios.get(capturedDataTempUrl)
-  const goodreadsRaw = resp.data.capturedLists.my_goodreads
-
+  const goodreadsRaw = resp.data.capturedLists.read_books
+  // console.log(goodreadsRaw)
   const goodreadsList = goodreadsRaw.map((book) => ({
     ...book,
     read_year: book.read_date ? new Date(book.read_date).getFullYear() : null,
@@ -154,6 +155,10 @@ async function main() {
     short_title: getShortenedTitle(book.title),
     rating_num: ratingToNum(book.rating),
     slug: slugify(getShortenedTitle(book.title)),
+    publish_date:
+      book.publish_date === 'unknown'
+        ? new Date(book.edition_publish_date).toISOString()
+        : new Date(book.publish_date).toISOString(),
   }))
 
   //Read the filepath and get json object there
