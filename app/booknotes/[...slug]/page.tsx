@@ -35,8 +35,8 @@ export async function generateMetadata({
 
   const publishedAt = book.publish_date && new Date(book.publish_date).toISOString()
   let imageList = [siteMetadata.socialBanner]
-  if (book.book_image) {
-    imageList = [book.book_image]
+  if (book.cover_image) {
+    imageList = [book.cover_image]
   }
   const ogImages = imageList.map((img) => {
     return {
@@ -78,6 +78,7 @@ export default async function BookPage({ params }: { params: { slug: string[] } 
   })
   const bookIndex = sortedBooks.findIndex((p) => p.slug === slug)
   const book = sortedBooks[bookIndex]
+  console.log({ book })
   if (bookIndex === -1 || !book) {
     return notFound()
   }

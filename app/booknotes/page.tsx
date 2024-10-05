@@ -76,10 +76,10 @@ function BookCard({ book }) {
       </div>
       <div className="flex flex-col">
         <div className="flex flex-row">
-          {book.book_image && (
+          {book.cover_image && (
             <div className="flex-none">
               <Image
-                src={book.book_image}
+                src={book.cover_image}
                 alt={`Cover of ${book.title}`}
                 width={96}
                 height={144}
@@ -107,7 +107,7 @@ function BookCard({ book }) {
               </span>
             ))}
           {book.review && (
-            <div className="mt-1 text-sm">
+            <div className="mt-1 whitespace-pre-wrap text-sm">
               {book.review.slice(0, MAX_REVIEW_LENGTH).trim()}
               {book.review.length > MAX_REVIEW_LENGTH && <span className="text-gray-300">...</span>}
             </div>

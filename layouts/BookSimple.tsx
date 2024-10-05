@@ -17,13 +17,12 @@ interface SimpleProps {
 }
 
 export default function BookSimple({ content, next, prev, children }: SimpleProps) {
-
   const {
     slug,
     title,
     author,
     publish_date,
-    book_image,
+    cover_image,
     rating_num,
     review,
     read_date,
@@ -43,12 +42,12 @@ export default function BookSimple({ content, next, prev, children }: SimpleProp
               <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">
                 <div className="mb-8 flex flex-col lg:flex-row">
                   <div className="mb-6 lg:mb-0 lg:w-1/3 lg:pr-8">
-                    {book_image && (
+                    {cover_image && (
                       <div className="overflow-hidden rounded-lg shadow-md">
                         <Image
                           width={300}
                           height={450}
-                          src={book_image}
+                          src={cover_image}
                           alt={`Cover of ${title}`}
                           className="h-auto w-full"
                         />
@@ -116,7 +115,9 @@ export default function BookSimple({ content, next, prev, children }: SimpleProp
                     {review && (
                       <div className="prose dark:prose-invert">
                         <h2 className="mb-2 text-2xl font-semibold">Review</h2>
-                        <p className="text-gray-700 dark:text-gray-200">{review}</p>
+                        <p className="whitespace-pre-wrap text-gray-700 dark:text-gray-200">
+                          {review}
+                        </p>
                       </div>
                     )}
                   </div>

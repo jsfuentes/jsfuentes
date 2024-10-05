@@ -1,6 +1,7 @@
 # Jorge's Blog
 
-- Uses browse.ai to scrape goodreads and create blog posts
+- Uses browse.ai to scrape goodreads into goodreadsScrape.json and fetches cover images that it then combines with my obsidian notes into a single book object
+  - Use `npm run refresh-notes` to refresh the data
 
 ## Template Features
 

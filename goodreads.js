@@ -91,11 +91,27 @@ function readFile(filePath) {
   }
 }
 
-function extractGoodreadsReview(reviewHtml) {
+function extractGoodreadsReview(reviewHtml, title) {
   const $ = cheerio.load(reviewHtml)
-  const hiddenText = $('span[style="display:none"]').text()
-  //   console.log(hiddenText)
-  return hiddenText
+
+  const spanHTML = $('span').html()
+
+  if (spanHTML === `None` || spanHTML === null) {
+    // console.log('no review', { spanHTML, title })
+    return ''
+  }
+
+  let reviewText = ''
+  // is hidden if too long
+  const hiddenHTML = $('span[style="display:none"]').html()
+  if (hiddenHTML === null) {
+    reviewText = $.text()
+    // console.log('no hidden', { reviewText, title, spanHTML })
+  } else {
+    reviewText = hiddenHTML.replace(/<br\s*\/?>/g, '\n').replace(/<[^>]*>/g, '')
+  }
+
+  return reviewText
 }
 
 function getShortenedTitle(title) {
@@ -151,7 +167,7 @@ async function main() {
   const goodreadsList = goodreadsRaw.map((book) => ({
     ...book,
     read_year: book.read_date ? new Date(book.read_date).getFullYear() : null,
-    review: extractGoodreadsReview(book.review_html),
+    review: extractGoodreadsReview(book.review_html, book.title),
     short_title: getShortenedTitle(book.title),
     rating_num: ratingToNum(book.rating),
     slug: slugify(getShortenedTitle(book.title)),
@@ -172,13 +188,13 @@ async function main() {
         (existing) => existing.goodreads_link === book.goodreads_link
       )
 
-      if (existingBook && existingBook.book_image) {
+      if (existingBook && existingBook.cover_image) {
         // If the book already exists and has an image, use the existing data
         return { ...existingBook, ...book }
       } else {
         // If the book doesn't exist or doesn't have an image, fetch the image
-        const book_image = await getPreviewImage(book.goodreads_link)
-        return { ...book, book_image }
+        const cover_image = await getPreviewImage(book.goodreads_link)
+        return { ...book, cover_image }
       }
     })
   )
