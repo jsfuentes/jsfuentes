@@ -1,16 +1,13 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { allQuotes } from 'contentlayer/generated'
 import { genPageMetadata } from 'app/seo'
 
-const MAX_REVIEW_LENGTH = 400
-
-export const metadata = genPageMetadata({ title: 'Book Notes' })
+export const metadata = genPageMetadata({ title: 'Quotes' })
 
 export default async function QuotesPage() {
   const quotes = allQuotes
 
-  // Group books by publish_year and sort by publish_date
+  // Group quotes by year and sort by date
   const groupedQuotes = quotes.reduce((acc, quote) => {
     const year = new Date(quote.slug).getFullYear() || 'Unknown'
     if (!acc[year]) {
@@ -21,7 +18,7 @@ export default async function QuotesPage() {
     return acc
   }, {})
 
-  // Sort books within each year by publish_date
+  // Sort quotes within each year by date
   Object.keys(groupedQuotes).forEach((year) => {
     //inplace sorting
     groupedQuotes[year].sort((a, b) => {
@@ -30,7 +27,7 @@ export default async function QuotesPage() {
     })
   })
 
-  // // Sort years in descending order with Unknown at end
+  // Sort years in descending order with Unknown at end
   const sortedYears = Object.keys(groupedQuotes)
     .filter((year) => year !== 'Unknown')
     .sort((a, b) => b.localeCompare(a))
