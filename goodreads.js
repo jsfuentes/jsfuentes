@@ -200,6 +200,8 @@ async function main() {
   )
 
   fs.writeFileSync(filePath, JSON.stringify(updatedData, null, 2))
+
+  console.log('Goodreads data from Browse AI synced successfully.')
 }
 
 main()

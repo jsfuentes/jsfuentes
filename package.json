@@ -10,9 +10,10 @@
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
     "prepare": "husky",
-    "refresh-books": "npm run copynotes && npm run goodreads",
+    "sync": "npm run copynotes && npm run goodreads && npm run copyquotes",
     "copynotes": "sudo bash ./copynotes.sh",
-    "goodreads": "node goodreads.js"
+    "goodreads": "node goodreads.js",
+    "copyquotes": "sudo bash ./copyquotes.sh"
   },
   "dependencies": {
     "@headlessui/react": "1.7.19",
