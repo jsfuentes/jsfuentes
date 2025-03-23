@@ -92,6 +92,7 @@ function readFile(filePath) {
 }
 
 function extractGoodreadsReview(reviewHtml, title) {
+  console.log('Extracting review for', { reviewHtml, title })
   const $ = cheerio.load(reviewHtml)
 
   const spanHTML = $('span').html()
@@ -162,7 +163,9 @@ async function main() {
 
   // console.log(capturedDataTempUrl)
   const resp = await axios.get(capturedDataTempUrl)
-  const goodreadsRaw = resp.data.capturedLists.read_books
+  // Sometimes books are just empty objects, so filter them out
+  const goodreadsRaw = resp.data.capturedLists.read_books.filter((book) => Boolean(book.title))
+  console.log(`Fetched ${goodreadsRaw.length} books from goodreads`)
   // console.log(goodreadsRaw)
   const goodreadsList = goodreadsRaw.map((book) => ({
     ...book,
@@ -176,6 +179,7 @@ async function main() {
         ? new Date(book.edition_publish_date).toISOString()
         : new Date(book.publish_date).toISOString(),
   }))
+  console.log(`Processed ${goodreadsList.length} books`)
 
   //Read the filepath and get json object there
   const filePath = path.join(__dirname, GOODREADS_FILE_PATH)
@@ -201,7 +205,7 @@ async function main() {
 
   fs.writeFileSync(filePath, JSON.stringify(updatedData, null, 2))
 
-  console.log('Goodreads data from Browse AI synced successfully.')
+  console.log(`${goodreadsList.length} books synced successfully.`)
 }
 
 main()

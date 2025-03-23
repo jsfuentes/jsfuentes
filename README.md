@@ -1,7 +1,7 @@
 # Jorge's Blog
 
 - Uses browse.ai to scrape goodreads into goodreadsScrape.json and fetches cover images that it then combines with my obsidian notes into a single book object
-  - Use `npm run refresh-notes` to refresh the data
+  - Use `npm run sync` to refresh the data
 
 ## Template Features
 
@@ -123,13 +123,13 @@ canonicalUrl: https://tailwind-nextjs-starter-blog.vercel.app/blog/introducing-t
 ```
 
 ## Deploy
+
 Just push to the main branch and it will automatically deploy to vercel.
 
 ## Frequently Asked Questions
 
 - [How can I add a custom MDX component?](/faq/custom-mdx-component.md)
 - [How can I customize the `kbar` search?](/faq/customize-kbar-search.md)
-
 
 ## Licence
 
