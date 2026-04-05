@@ -83,6 +83,12 @@ module.exports = () => {
           port: '',
           pathname: '/images/**',
         },
+        {
+          protocol: 'https',
+          hostname: 'm.media-amazon.com',
+          port: '',
+          pathname: '/images/**',
+        },
       ],
       unoptimized,
     },
